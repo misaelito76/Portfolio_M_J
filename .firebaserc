@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfoliodb-f9e0d": {
+      "hosting": {
+        "MyPortfolio": [
+          "portfoliodb-f9e0d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfoliodb-f9e0d"
+  }
+}
