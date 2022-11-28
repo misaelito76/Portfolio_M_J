@@ -20,8 +20,11 @@ export class AppComponent {
 show
 likesObj
 db
+user
   constructor(public dialog: MatDialog, private likeService: FeedbackLikeService,private firestore:Firestore) {
 this.db=firestore
+this.user=Math.random()
+console.log(this.user)
     this.likesObj={
       likes:0
     }
@@ -38,6 +41,8 @@ idArr.push(doc)
   this.likesObj.likes=idArr.length;
 
 }
+
+
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogSkillsComponent);
@@ -69,8 +74,8 @@ idArr.push(doc)
   }
 
   shareData = {
-    title : 'MyPortfolio',
-    text: 'Currently looking for a job',
+    title : 'My Portfolio',
+    text: 'Thank you for sharing',
     url: 'https://portfoliodb-f9e0d.web.app/'
   }
   async share(){
@@ -84,14 +89,6 @@ catch (err){
 
   }
    app = initializeApp(environment.firebase);
-
-
-// Initialize Cloud Firestore and get a reference to the service
-//  db = getFirestore(this.app);
-//    misael = collection(this.db, "MyPortfolio");
-
-
-
 async  likeFunc(){
 this.likesObj.likes++
 this.show=false
@@ -100,18 +97,13 @@ console.log(response)
 
   }
 
-
  async dislike(){
+  this.show=true;
+
     this.likesObj.likes--
     await deleteDoc(doc(this.db, "Likes"));
-    this.show=true;
 
       }
-
-
-
-
-
 
 }
 

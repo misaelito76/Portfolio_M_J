@@ -1,132 +1,117 @@
-
-<mat-toolbar class="  mat-elevation-z20 fixed-top" >
-
-  <span>Portfolio</span>
-
-
-  <span span class="example-spacer"></span>
-  <button (click)="openMyAppsDialog()"  mat-button
-  #tooltip="matTooltip"
-  matTooltip="My Apps"
-  matTooltipHideDelay="100"
-
-  ><img src="../assets/application-42-32.png"></button>
-
-  <button (click)="openDialog()"  mat-button
-  #tooltip="matTooltip"
-  matTooltip="Skills Set"
-  matTooltipHideDelay="100"
-
-  ><img src="../assets/professional-knowledge-and-skills-32.png"></button>
-  <button  (click)="openSchoolDialog()" mat-button
-  #tooltip="matTooltip"
-  matTooltip="School & Learning"
-  matTooltipHideDelay="100"
-
-
-  ><img src="../assets/round-school-24px-32.png"></button>
-  <button class="avatar" mat-button
-  #tooltip="matTooltip"
-  matTooltip="My Email Address"
-  matTooltipHideDelay="100"
-
-  ><a href="mailto:jmisael56@yahoo.com"><img src="../assets/contact-us-email-32.png"></a></button>
-</mat-toolbar>
-<div class="home">
-<br><br>
-
-
-  <div id="card-full"class="row">
-    <div class="col-sm-3">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Misael Jimenez</mat-card-title>
-          <mat-card-subtitle>Software Developer</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../assets/misael.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <br>
-          <h1><b>Hello!</b></h1>
-
-          <p>
-I am based in Tampa FL. I love Data Structures. currently pursuing an Associate Degree in Computer Programming and Analysis.
-          </p>
-
-
-        </mat-card-content>
-
-        <mat-card-actions >
-          <div *ngIf="show else hide">
-          <button id="like"(click)="likeFunc()" mat-button><img src="../assets/like-full.png"></button>
-          </div>
-          <ng-template #hide>
-          <button id="dislike"(click)="dislike()" mat-button><img src="../assets/dislike-9-32.png"></button>
-</ng-template>
-<span class=""
-#tooltip="matTooltip"
-          matTooltip="From Firestore"
-          matTooltipHideDelay="100"
-
-><b>{{likesObj.likes}}</b></span>
-          <button (click)="share()" mat-button
-          #tooltip="matTooltip"
-          matTooltip="Thank you for sharing"
-          matTooltipHideDelay="100"
-
-          ><img src="../assets/share-338-32.png"></button>
-          <button
-          (click)="openFeedDialog()"
-          #tooltip="matTooltip"
-          matTooltip="Feedback for my App"
-          matTooltipHideDelay="100"
-
-          mat-button
-
-
-          ><img src="../assets/feedback-110-32.png"></button>
-
-        </mat-card-actions>
-      </mat-card>
-    </div>
-    <div class="col-sm-9">
-      <mat-card class="example-c">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Most Relevant Experience</mat-card-title>
-          <mat-card-subtitle>Software Developer (Intern & Consulting)</mat-card-subtitle>
-        </mat-card-header>
-        <img
-        #tooltip="matTooltip"
-        matTooltip="MAYA AI Company"
+<div class="home" >
+  <mat-toolbar class="app-toolbar  mat-elevation-z20 " >
+    <button
+    class="btn"
+    mat-icon-button
+    #tooltip="matTooltip"
+        matTooltip="Menu"
         matTooltipHideDelay="100"
-        mat-card-image src="../assets/Maya.png" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <br>
-          <h1><b>MAYA AI</b></h1>
-          <p>
-In my year at MAYA AI I developed several small apps built mostly in JavaScript or Java, Mp3 projects, Speech to text and text to speech primarily focusing in performance.
-Projects were discussed in an Agile environment. It was a great experience, every snippet was a challenge and the team is awesome          </p>
+    [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>dashboard</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button
+      class="btn"
+
+      mat-menu-item
+      (click)="openMyAppsDialog()">
+        <mat-icon>web</mat-icon>
+        <span>Apps</span>
+      </button>
+      <button
+      class="btn"
+
+      mat-menu-item (click)="openSchoolDialog()">
+        <mat-icon>school</mat-icon>
+        <span>School</span>
+      </button>
+      <button
+      class="btn"
+
+      mat-menu-item (click)="openDialog()">
+        <mat-icon>work</mat-icon>
+        <span>Skills</span>
+      </button>
+      <button
+      class="btn"
+
+      mat-menu-item (click)="openFeedDialog()">
+        <mat-icon>feedback</mat-icon>
+        <span>Feedback</span>
+      </button>
+    </mat-menu>
+    <span>Portfolio</span>
 
 
-        </mat-card-content>
-        <br>
-        <mat-card-actions>
+    <span span class="example-spacer"></span>
+
+    <button class="btn" mat-button
+    #tooltip="matTooltip"
+    matTooltip="My Email Address"
+    matTooltipHideDelay="100"
+
+    ><a href="mailto:jmisael56@yahoo.com"><img src="../assets/contact-us-email-32.png"></a></button>
+  </mat-toolbar>
+
+
+  <mat-card class="mat-elevation-z20 example-card">
+<br>
+    <img class="" mat-card-image src="../assets/caratula.png">
+    <br>
+    <br>
+    <mat-card-title align="center"><b>Software/Web Developer</b></mat-card-title>
+    <br>
+    <mat-card-title align="center">Welcome</mat-card-title>
+<br>
+<mat-divider></mat-divider>
+<br>
+<br>
+    <mat-card-content >
+      <p>
+        My name is Misael Jimenez I'm an experienced software developer based in Tampa Florida who constantly seeks out
+        innovative solutions to solve coding problems. In my 3+ years in this industry,
+         I've improved my analytical thinking, skillset and collaboration skills,
+         and I love working with a team.
+      </p>
+      <br><br>
+      <mat-divider></mat-divider>
+
+    </mat-card-content>
+    <mat-card-actions class="sda">
+      <div *ngIf="show else hide">
+        <button id="like"(click)="likeFunc()" mat-button><img src="../assets/like-full.png"></button>
+        </div>
+        <ng-template #hide>
+        <button id="dislike"(click)="dislike()" mat-button><img src="../assets/dislike-9-32.png"></button>
+    </ng-template>
+    <span class=""
+    #tooltip="matTooltip"
+        matTooltip="From Firestore"
+        matTooltipHideDelay="100"
+
+    ><b>{{likesObj.likes}}</b></span>
+        <button (click)="share()" mat-button
+        #tooltip="matTooltip"
+        matTooltip="Thank you for sharing"
+        matTooltipHideDelay="100"
+
+        ><img src="../assets/share-74-32.png"></button>
+
+
           <button class="avatar" mat-button
-          #tooltip="matTooltip"
-          matTooltip="Review my projects"
-          matTooltipHideDelay="100"
-          ><a href="https://github.com/misaelito76"><img src="../assets/github-42-32.png"></a></button>
+      #tooltip="matTooltip"
+      matTooltip="Review my projects"
+      matTooltipHideDelay="100"
+      ><a href="https://github.com/misaelito76"><img src="../assets/github-42-32.png"></a></button>
 
-          <button mat-button
-          #tooltip="matTooltip"
-          matTooltip="My linkedin Profile "
-          matTooltipHideDelay="100"
-          ><a href="https://www.linkedin.com/in/misael-jimenez197609/">
-            <img src="../assets/linkedin-98-32.png"></a></button>
+      <button  mat-button
+      #tooltip="matTooltip"
+      matTooltip="My linkedin Profile "
+      matTooltipHideDelay="100"
+      ><a href="https://www.linkedin.com/in/misael-jimenez197609/">
+        <img src="../assets/linkedin-110-32.png"></a></button>
 
-        </mat-card-actions>
-      </mat-card>
-    </div>
-  </div>
+    </mat-card-actions>
+  </mat-card>
+
 </div>

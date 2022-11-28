@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatInputModule} from '@angular/material/input';
-
+import {MatMenuModule} from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -38,6 +38,7 @@ import { MyAppsComponent } from './my-apps/my-apps.component'; // <== add the im
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatMenuModule,
     MatIconModule,
     MatSlideToggleModule,
     MatSidenavModule,

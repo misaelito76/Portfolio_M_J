@@ -8,6 +8,7 @@ import { FeedbackLikeService } from 'src/Services/feedback-like.service';
 })
 export class UserFeedComponent {
   chunk
+
   constructor(private feed :FeedbackLikeService){
 
     this.chunk={
@@ -27,5 +28,6 @@ export class UserFeedComponent {
   const response= await this.feed.addFeed(this.chunk)
   console.log(response)
     }
+
 
 }

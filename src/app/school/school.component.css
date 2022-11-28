@@ -1,1 +1,36 @@
+.hcc-header-image {
+  background-image: url('../../assets/IconHcc.png');
+  background-size: cover;
 
+}
+.mtl-header-image {
+  background-image: url('../../assets/iconMtl.png');
+  background-size: cover;
+}
+.vc-header-image {
+  background-image: url('../../assets/iconVc.png');
+  background-size: cover;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-header-image {
+  background-image: url('../../assets/misael.jpg');
+  background-size: cover;
+}
+.example-full-width {
+  width: 100%;
+}
+.example-card {
+  max-width: 400px;
+}
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.btn{
+  text-align: center;
+}

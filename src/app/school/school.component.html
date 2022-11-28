@@ -1,37 +1,53 @@
-<div class="container">
-  <br>
-<h1 mat-dialog-title>Hillsborough Community College</h1>
-<mat-dialog-content class="">
-  <h2>Associate in Sciences</h2>
+<mat-card class="example-card">
 
+
+<mat-dialog-content class="mat-typography">
+
+  <mat-card-header>
+
+  <div mat-card-avatar class="hcc-header-image"></div>
+
+  <mat-card-title>HCC</mat-card-title>
+  <br>
+  <mat-card-subtitle>(Hillsborough Community College)</mat-card-subtitle>
+  </mat-card-header>
+  <br>
+  <h3>Associate in Sciences</h3>
   <p><b>Major :</b> Computer Programming & Analysis</p>
 
   <p><b>Overall GPA :</b> 3.4</p>
-  <p>In Progress</p>
-
-
-</mat-dialog-content>
+  <p>In Progress..</p>
 <mat-divider></mat-divider>
+<mat-card-header>
 
-<h1 mat-dialog-title> Montreal College, Canada</h1>
+  <div mat-card-avatar class="mtl-header-image"></div>
 
-<mat-dialog-content class="">
-  <h2>MCIT (AEC)</h2>
+  <mat-card-title>MCIT</mat-card-title>
+  <br>
+  <mat-card-subtitle>(Montreal College)</mat-card-subtitle>
+  </mat-card-header>
 
-  <p><b>Major :</b>   Certificate of Programming<br> for mobile technologies-LEA.CK Web app development
+<p><b>Major :</b>   Certificate of Programming<br>
+                    for mobile technologies-LEA.CK<br>
+                     Web app development
   </p>
-
+<p>Graduated</p>
   <p><b>Overall GPA :</b> 3.6</p>
-  </mat-dialog-content>
   <mat-divider></mat-divider>
-<h1 mat-dialog-title> Raul Suarez, Cuba</h1>
+  <mat-card-header>
 
-<mat-dialog-content class="">
-  <h2>High School</h2>
+    <div mat-card-avatar class="vc-header-image"></div>
+
+    <mat-card-title>IPI</mat-card-title>
+    <br>
+    <mat-card-subtitle>(Polytechnical Institute,Cuba)</mat-card-subtitle>
+    </mat-card-header>
   <p><b>Overall GPA :</b> 3.4</p>
-
+  <p>Diploma</p>
 </mat-dialog-content>
+
 <mat-dialog-actions align="center">
-  <button class="mat-elevation-z20"mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
+  <button class="mat-elevation-z20" mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
 </mat-dialog-actions>
-</div>
+<br>
+</mat-card>

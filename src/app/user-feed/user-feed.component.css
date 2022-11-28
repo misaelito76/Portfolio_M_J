@@ -3,7 +3,15 @@
   max-width: 500px;
   width: 100%;
 }
+.example-header-image {
+  background-image: url('../../assets/misael.jpg');
+  background-size: cover;
+  border: 2px solid rgb(78, 79, 81);
 
+}
+.ltext{
+  text-align: center;
+}
 .example-full-width {
   width: 100%;
 }
