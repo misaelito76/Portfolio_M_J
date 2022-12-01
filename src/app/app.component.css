@@ -1,9 +1,25 @@
  .home {
 width:100%;
 }
+
+.spinner-dotted{
+  align-items: center;
+  padding-inline: 42%;
+  padding-top:45vh;
+  display: flex;
+}
+/* mat-spinner{
+
+
+align-items: center;
+} */
+
 .misael {
   border: 2px solid rgb(19, 19, 19);
 }
+/* .btn{
+  border: none;
+} */
 .app-toolbar {
   position: sticky;
   position: -webkit-sticky; /* For macOS/iOS Safari */

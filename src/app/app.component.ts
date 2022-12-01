@@ -16,12 +16,12 @@ import { MyAppsComponent } from './my-apps/my-apps.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+showSpinner=true;
 show
 likesObj
 db
 user
-  constructor(public dialog: MatDialog, private likeService: FeedbackLikeService,private firestore:Firestore) {
+  constructor(public dialog: MatDialog, private likeService: FeedbackLikeService,private firestore:Firestore ) {
 this.db=firestore
 this.user=Math.random()
 console.log(this.user)
@@ -29,6 +29,7 @@ console.log(this.user)
       likes:0
     }
     this.show=true
+
     this.getDocs()
   }
 async getDocs(){
@@ -39,6 +40,8 @@ async getDocs(){
 idArr.push(doc)
   });
   this.likesObj.likes=idArr.length;
+
+this.showSpinner=false
 
 }
 

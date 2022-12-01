@@ -1,3 +1,5 @@
+import { SpinnersAngularModule } from 'spinners-angular';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatInputModule} from '@angular/material/input';
@@ -36,6 +38,7 @@ import { MyAppsComponent } from './my-apps/my-apps.component'; // <== add the im
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SpinnersAngularModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
